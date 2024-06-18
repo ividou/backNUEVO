@@ -1,0 +1,61 @@
+@login = http://localhost:3000/user/login
+
+@singup = http://localhost:3000/user/usersp
+
+@getData = http://localhost:3000/user/getData
+
+@addMateria = http://localhost:3000/user/addMateria
+
+@cursar = http://localhost:3000/user/cursar
+
+@getMateriaById = http://localhost:3000/user/getMateriaById/232323237
+
+
+GET {{login}}
+Content-Type: application/json
+
+{
+    "dni": "232323237",
+    "password":"123"
+}
+
+###
+POST {{singup}}
+Content-Type: application/json
+
+{
+    "nombre": "Juan",
+    "dni":"232323237",
+    "correro":"correof",
+    "password": "123"
+
+
+}
+
+###
+GET {{getData}}
+mani: eyJhbGciOiJIUzI1NhIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIjMzIzMjMyMzciLCJkYXQiOjE3MTY5MTU3ODMyImV4cCI6MTcxNjkxNTg0M30.K2W1tDWWW76ddGg8vllkyyzlu6QQuqPoz3Ti58lahj8
+
+
+###
+POST {{addMateria}}
+mani: eyJhbGciOiJIUzI1NhIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIjMzIzMjMyMzciLCJkYXQiOjE3MTY5MTU3ODMyImV4cCI6MTcxNjkxNTg0M30.K2W1tDWWW76ddGg8vllkyyzlu6QQuqPoz3Ti58lahj8
+Content-Type: application/json
+
+{
+    "nombre": "Geografia"
+}
+
+###
+POST {{cursar}}
+mani: eyJhbGciOiJIUzI1NhIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIjMzIzMjMyMzciLCJkYXQiOjE3MTY5MTU3ODMyImV4cCI6MTcxNjkxNTg0M30.K2W1tDWWW76ddGg8vllkyyzlu6QQuqPoz3Ti58lahj8
+Content-Type: application/json
+
+{
+  "dni": "232323237",
+  "idMateria": 8
+}
+
+### Obtener materias cursadas por un alumno (protegido por token)
+GET {{getMateriaById}}
+mani: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMzIzMjMyMzciLCJpYXQiOjE3MTY5MTg1MjQsImV4cCI6OTAwMDAwMDE3MTY5MTg1MzB9.pJksi_4P4kUpPjx_Pcw6a-KfIAYZ4PS35A-dIz9Gi-U
