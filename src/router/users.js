@@ -7,7 +7,6 @@ import {
   getData,
   logIn,
   addMateria,
-  cursarMateria,
   cursar,
   getMateriaById,
 } from "../controller/users";

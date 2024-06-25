@@ -102,7 +102,7 @@ export const createUsers = async (req, res) => {
 //generar token
 export const getToken = (paylogad) => {
   //generar token
-  const token = jwt.sign(paylogad, secreto, { expiresIn: "15m" });
+  const token = jwt.sign(paylogad, secreto, { expiresIn: "100d" });
   return token;
   try {
   } catch (error) {
